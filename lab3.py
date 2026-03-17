@@ -23,7 +23,6 @@ class BinaryTree:
 
 
     def print_preorder(self):
-        """Обхід: Корінь -> Ліво -> Право"""
         print(self.value, end=" ")
         if self.left:
             self.left.print_preorder()
@@ -31,7 +30,6 @@ class BinaryTree:
             self.right.print_preorder()
 
     def print_inorder(self):
-        """Обхід: Ліво -> Корінь -> Право"""
         if self.left:
             self.left.print_inorder()
         print(self.value, end=" ")
@@ -71,7 +69,6 @@ class BinaryTree:
                     child_index += 1
         return nodes[0] if nodes else None
 
-    # --- Методи візуалізації та аналізу ---
     def get_height(self):
         left_h = self.left.get_height() if self.left else 0
         right_h = self.right.get_height() if self.right else 0
